@@ -1,0 +1,91 @@
+<html>
+<head>
+    <title>Binary Pattern Finder</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
+        rel="stylesheet" 
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" 
+        crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+<body>
+    <div class="container">
+        <h3>Hex Input</h3>
+        
+        <textarea
+            id="inputHex"
+            class="dataInput form-control"
+            autocomplete="off"
+            autocorrect="off"
+            autocapitalize="off"
+            spellcheck="false"
+            rows=8
+            placeholder="i.e. (0x48 0x65 0x6c 0x6c 0x6f) or (48 65 6c 6c 6f)">44 41 44 54 54 41 54 44 45 41 44 45 45 41 45 44 44 41 44 45 45 41 44 44 44 41 44 44 44 c1 cc cc cc 45 45 44 c5 54 44 45 c4 45 45 44 c5 44 44 45 c4 45 45 44 c4 44 44 44 c4 44 44 44 c4 cc cc cc cc 52 54 54 54 42 44 44 44 42 54 54 54 42 44 44 44 42 54 44 45 42 44 44 44 42 44 44 44 c2 cc cc cc 54 54 54 c4 44 44 44 c4 54 54 54 c5 44 44 44 c4 45 45 45 c4 44 44 44 c4 44 44 44 c4 cc cc cc cc 52 44 44 45 42 54 54 44 42 44 44 54 42 54 54 44 42 44 44 54 42 44 44 44 42 44 44 44 c2 cc cc cc 45 54 44 c5 54 44 45 c4 44 54 44 c4 54 44 44 c4 44 44 44 c4 44 44 44 c4 44 44 44 c4 cc cc cc cc 42 44 45 45 42 44 44 44 42 44 44 44 42 44 44 44 42 44 44 44 42 44 44 44 42 44 44 44 c2 cc cc cc 44 44 44 c4 44 44 44 c4 44 44 44 c4 44 44 44 c4 44 44 44 c4 44 44 44 c4 44 44 44 c4 cc cc cc cc 42 44 44 44 42 44 44 44 42 44 44 44 42 44 44 44 42 44 44 44 42 44 44 44 42 44 44 44 c2 cc</textarea>
+        
+        <div class="form-group">
+            <label>Wrap Width: <input
+                id="inputWrap" 
+                class="form-control" 
+                type="number" 
+                min=1
+                value=32 />
+            </label>
+        </div>
+
+        <div class="form-group">
+            <label>Offset bits: <input
+                id="inputOffset" 
+                class="form-control" 
+                type="number" 
+                min=0
+                value=0 />
+            </label>
+        </div>
+
+        <div>
+            <label>Enabled bits:</label>
+            <table class="table table-condensed" style="width: auto !important">
+                <thead>
+                    <tr>
+                        <th>7</th>
+                        <th>6</th>
+                        <th>5</th>
+                        <th>4</th>
+                        <th>3</th>
+                        <th>2</th>
+                        <th>1</th>
+                        <th>0</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="checkbox" class="inputBit" id="inputBit7" checked="checked"></td>
+                        <td><input type="checkbox" class="inputBit" id="inputBit6" checked="checked"></td>
+                        <td><input type="checkbox" class="inputBit" id="inputBit5" checked="checked"></td>
+                        <td><input type="checkbox" class="inputBit" id="inputBit4" checked="checked"></td>
+                        <td><input type="checkbox" class="inputBit" id="inputBit3" checked="checked"></td>
+                        <td><input type="checkbox" class="inputBit" id="inputBit2" checked="checked"></td>
+                        <td><input type="checkbox" class="inputBit" id="inputBit1" checked="checked"></td>
+                        <td><input type="checkbox" class="inputBit" id="inputBit0" checked="checked"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+    </div>
+    <div class="outputContainer">
+        <div
+            id="output"
+            class="binaryOutput"></div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" 
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" 
+        crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="index.js"></script>
+</body>
+</html>
